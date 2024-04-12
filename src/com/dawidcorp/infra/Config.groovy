@@ -1,18 +1,18 @@
 package com.dawidcorp.infra
 
 class Config {
-    static private globalConfig = [
+    private static globalConfig = [
         "repoName": "infra",
         "mainBranch": "master",
         "logLevel": "INFO",
     ]
-    static public logLevel = LogLevel.valueOf(globalConfig.logLevel)
+    private static logLevel = LogLevel.valueOf(globalConfig.logLevel)
 
-    static info() {
+    public static info() {
         return logLevel.info()
     }
 
-    static debug() {
+    public static debug() {
         return logLevel.debug()
     }
 
