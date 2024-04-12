@@ -1,7 +1,7 @@
 package com.dawidcorp.infra
 
 enum LogLevel {
-    OFF(0), INFO(100), WARN(200), DEBUG(400)
+    OFF(0), INFO(3), DEBUG(10)
 
     private final int value
 
@@ -9,16 +9,11 @@ enum LogLevel {
         this.value = value
     }
 
-    static public LogLevel fromString(String level) {
-        switch (level) {
-            case "INFO":
-                return INFO
-            case "WARN":
-                return WARN
-            case "DEBUG":
-                return DEBUG
-            default:
-                return DEBUG
-        }
+    boolean info() {
+        return value >= INFO.value
+    }
+
+    boolean debug() {
+        return value >= DEBUG.value
     }
 }

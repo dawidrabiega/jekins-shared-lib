@@ -8,13 +8,13 @@ class Config {
     ]
     static public logLevel = LogLevel.valueOf(globalConfig.logLevel)
 
-    //static boolean info() {
-    //    return logLevel.info()
-    //}
+    static info() {
+        return logLevel.info()
+    }
 
-    //static boolean debug() {
-    //    return logLevel.debug()
-    //}
+    static debug() {
+        return logLevel.debug()
+    }
 
     public static mainBranch() {
         return globalConfig.mainBranch
