@@ -4,9 +4,9 @@ class Config {
     static private globalConfig = [
         "repoName": "infra",
         "mainBranch": "master",
-        "logLevel": "DEBUG",
+        "logLevel": "INFO",
     ]
-    static public logLevel
+    static public logLevel = LogLevel.valueOf(globalConfig.logLevel)
 
     //static boolean info() {
     //    return logLevel.info()
@@ -24,4 +24,8 @@ class Config {
         globalConfig = globalConfig + config
         //logLevel = LogLevel.fromString(globalConfig.logLevel)
     }
+
+    //static {
+    //    logLevel = LogLevel.valueOf(globalConfig.logLevel)
+    //}
 }
