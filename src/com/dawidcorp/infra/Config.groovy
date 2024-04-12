@@ -22,7 +22,7 @@ class Config {
 
     public static init(Map config) {
         globalConfig = globalConfig + config
-        //logLevel = LogLevel.fromString(globalConfig.logLevel)
+        logLevel = LogLevel.valueOf(globalConfig.logLevel)
     }
 
     //static {
